@@ -446,7 +446,7 @@ export default async function ProjectDetailPage({
                     currentUserId={user.id}
                     userRole={user.role}
                     onDeleteFile={async (fileId) => {
-                      "use server"
+                      "use client"
                       // This will be handled client-side
                     }}
                   />
