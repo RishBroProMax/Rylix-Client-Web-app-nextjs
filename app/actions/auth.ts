@@ -1,4 +1,4 @@
-"use server"
+"use client"
 
 import { hash } from "bcrypt"
 import { z } from "zod"
