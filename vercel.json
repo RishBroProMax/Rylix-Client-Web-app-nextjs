@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NEXTAUTH_URL": {
+      "development": "http://localhost:3000",
+      "preview": "${VERCEL_URL}",
+      "production": "${VERCEL_URL}"
+    },
+    "NEXTAUTH_SECRET": {
+      "development": "your-development-secret",
+      "preview": "@nextauth-secret",
+      "production": "@nextauth-secret"
+    }
+  },
+  "build": {
+    "env": {
+      "POSTGRES_PRISMA_URL": "@postgres-prisma-url",
+      "POSTGRES_URL_NON_POOLING": "@postgres-url-non-pooling",
+      "NEXT_PUBLIC_SUPABASE_URL": "@next-public-supabase-url",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@next-public-supabase-anon-key",
+      "SUPABASE_SERVICE_ROLE_KEY": "@supabase-service-role-key",
+      "SUPABASE_JWT_SECRET": "@supabase-jwt-secret",
+      "GOOGLE_CLIENT_ID": "@google-client-id",
+      "GOOGLE_CLIENT_SECRET": "@google-client-secret",
+      "GOOGLE_API_KEY": "@google-api-key"
+    }
+  }
+}
+
